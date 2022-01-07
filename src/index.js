@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+// import TodoList from "./redux/TodoList";
+// import TodoList from "./redux-thunk/TodoList";
+// import TodoList from "./redux-saga/TodoList";
+// ReactDOM.render(<TodoList />, document.getElementById("root"));
 
+
+import TodoList from "./react-redux/TodoList";
+import { Provider } from "react-redux";
+import store from "./react-redux/store";
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <TodoList />
+  </Provider>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
