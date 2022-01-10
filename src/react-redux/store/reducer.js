@@ -5,8 +5,7 @@ const defaultState = {
   list: [],
 };
 export default (state = defaultState, action) => {
-  console.log(action);
-  //   reducer智能接受state，不能改变state
+  //   reducer只能接受state，不能改变state
   if (action.type === CHANGE_INPUT) {
     let newState = JSON.parse(JSON.stringify(state));
     newState.inputValue = action.value;

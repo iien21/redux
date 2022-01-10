@@ -27,7 +27,6 @@ export const getTodoList = () => {
         "https://mock.mengxuegu.com/mock/61a9c941c140524f189210d8/getList/getList"
       )
       .then((res) => {
-        console.log(111, res);
         const data = res.data;
         const action = getListAction(data);
         dispatch(action);

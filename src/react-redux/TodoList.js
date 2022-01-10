@@ -2,28 +2,37 @@ import React, { Component } from "react";
 import "antd/dist/antd.css";
 import { Button, Input, List } from "antd";
 import { connect } from "react-redux";
-import {
-  changeInputAction,
-  addItemAction,
-  deleteItemAction,
-  getTodoList,
-} from "./store/actionCreators";
 import { ADD_ITEM, CHANGE_INPUT } from "./store/actionTypes";
+
+// 无状态组件
+// const TodoList = (props) => {
+//   let { inputValue, inputChange, clickBtn, list } = props;
+//   return (
+//     <div style={{ margin: "10px" }}>
+//       <div>
+//         <Input
+//           style={{ width: "250px", marginRight: "10px" }}
+//           value={inputValue}
+//           onChange={inputChange}
+//         />
+//         <Button type="primary" onClick={clickBtn}>
+//           提交
+//         </Button>
+//       </div>
+//       <div style={{ margin: "10px", width: "300px" }}>
+//         <List
+//           bordered
+//           dataSource={list}
+//           renderItem={(item, index) => <List.Item>{item}</List.Item>}
+//         />
+//       </div>
+//     </div>
+//   );
+// };
 
 class TodoList extends Component {
   constructor(props) {
     super(props);
-    // this.state = store.getState();
-    // console.log(store.getState());
-    // this.changeInputValue = this.changeInputValue.bind(this);
-    // this.storeChange = this.storeChange.bind(this);
-    // this.clickBtn = this.clickBtn.bind(this);
-    // this.deleteItem = this.deleteItem.bind(this);
-    // store.subscribe(this.storeChange);
-  }
-  componentDidMount() {
-    // const action = getTodoList();
-    // store.dispatch(action);
   }
   render() {
     let { inputValue, inputChange, clickBtn, list } = this.props;

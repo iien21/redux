@@ -1,12 +1,11 @@
 import { CHANGE_INPUT, ADD_ITEM, DELET_ITEM,GET_LIST } from "./actionTypes";
 
 const defaultState = {
-  inputValue: "wrrrrrr",
+  inputValue: "world",
   list: [],
 };
 export default (state = defaultState, action) => {
-  console.log(action);
-  //   reducer智能接受state，不能改变state
+  //   reducer只能接受state，不能改变state
   if (action.type === CHANGE_INPUT) {
     let newState = JSON.parse(JSON.stringify(state));
     newState.inputValue = action.value;
