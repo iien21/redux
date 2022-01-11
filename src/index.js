@@ -6,13 +6,25 @@ import ReactDOM from "react-dom";
 // ReactDOM.render(<TodoList />, document.getElementById("root"));//redux,redux-thunk,redux-saga
 
 /**react-redux**/
-import TodoList from "./react-redux/TodoList";
+// import TodoList from "./react-redux/TodoList";
+// import { Provider } from "react-redux";
+// import store from "./react-redux/store";
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <TodoList />
+//   </Provider>,
+//   document.getElementById("root")
+// );
+/**react-redux**/
+
+/**react-redux&&redux-thunk**/
+import TodoList from "./redux&thunk/TodoList";
 import { Provider } from "react-redux";
-import store from "./react-redux/store";
+import store from "./redux&thunk/store";
 ReactDOM.render(
   <Provider store={store}>
     <TodoList />
   </Provider>,
   document.getElementById("root")
 );
-/**react-redux**/
+/**react-redux&&redux-thunk**/
